@@ -19,5 +19,7 @@ from . import views
 
 app_name = "stored"
 urlpatterns = [
-
+    url('', views.FrontPage.as_view()),
+    url(r'search/<query>', views.SearchResultPage.as_view()),
+    url(r'application/<slug>', views.SoftwareDetailPage.as_view()),
 ]
